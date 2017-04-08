@@ -87,7 +87,7 @@
 <tspan x="10" y="1354">  │ ├── punycode@1.4.1 </tspan>
 <tspan x="10" y="1370">  │ ├── querystring-es3@0.2.1 </tspan>
 <tspan x="10" y="1386">  │ ├── read-only-stream@2.0.0 </tspan>
-<tspan x="10" y="1402">  │ ├─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="1402">  │ ├─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="1418">  │ │ ├── buffer-shims@1.0.0 </tspan>
 <tspan x="10" y="1434">  │ │ ├── core-util-is@1.0.2 </tspan>
 <tspan x="10" y="1450">  │ │ ├── isarray@1.0.0 </tspan>
