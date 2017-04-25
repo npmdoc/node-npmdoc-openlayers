@@ -51,7 +51,7 @@
 
         href="https://openlayers.org/"
 
-    >openlayers (v4.0.1)</a>
+    >openlayers (v4.1.0)</a>
 </h1>
 <h4>Build tools and sources for developing OpenLayers based mapping applications</h4>
 <div class="apidocSectionDiv"><a
@@ -63,7 +63,70 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">openlayers.</span>api_plugin</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">openlayers.</span>define_plugin</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">openlayers.</span>publish</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">openlayers.</span>serve_js</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">openlayers.</span>virtual_plugin</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.openlayers.api_plugin">module openlayers.api_plugin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.openlayers.api_plugin.defineTags">
+            function <span class="apidocSignatureSpan">openlayers.api_plugin.</span>defineTags
+            <span class="apidocSignatureSpan">(dictionary)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.openlayers.define_plugin">module openlayers.define_plugin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.openlayers.define_plugin.defineTags">
+            function <span class="apidocSignatureSpan">openlayers.define_plugin.</span>defineTags
+            <span class="apidocSignatureSpan">(dictionary)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.openlayers.publish">module openlayers.publish</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.openlayers.publish.publish">
+            function <span class="apidocSignatureSpan">openlayers.</span>publish
+            <span class="apidocSignatureSpan">(data, opts)</span>
+            </a>
 
         </li>
 
@@ -82,11 +145,247 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.openlayers.virtual_plugin">module openlayers.virtual_plugin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.openlayers.virtual_plugin.defineTags">
+            function <span class="apidocSignatureSpan">openlayers.virtual_plugin.</span>defineTags
+            <span class="apidocSignatureSpan">(dictionary)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.openlayers" id="apidoc.module.openlayers">module openlayers</a></h1>
 
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.openlayers.api_plugin" id="apidoc.module.openlayers.api_plugin">module openlayers.api_plugin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.openlayers.api_plugin.defineTags" id="apidoc.element.openlayers.api_plugin.defineTags">
+        function <span class="apidocSignatureSpan">openlayers.api_plugin.</span>defineTags
+        <span class="apidocSignatureSpan">(dictionary)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defineTags = function (dictionary) {
+
+  dictionary.defineTag(&#x27;api&#x27;, {
+    onTagged: function(doclet, tag) {
+      doclet.api = tag.text || &#x27;experimental&#x27;;
+    }
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.openlayers.define_plugin" id="apidoc.module.openlayers.define_plugin">module openlayers.define_plugin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.openlayers.define_plugin.defineTags" id="apidoc.element.openlayers.define_plugin.defineTags">
+        function <span class="apidocSignatureSpan">openlayers.define_plugin.</span>defineTags
+        <span class="apidocSignatureSpan">(dictionary)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defineTags = function (dictionary) {
+
+  dictionary.defineTag(&#x27;define&#x27;, {
+    canHaveType: true,
+    mustHaveValue: true,
+    onTagged: function(doclet, tag) {
+      var types = tag.value.type.names;
+      if (types.length === 1 &#x26;&#x26; types[0] === &#x27;boolean&#x27;) {
+        var match = tag.value.description.match(DEFAULT_VALUE);
+        if (match) {
+          doclet.define = {
+            default: match[1] === &#x27;true&#x27;
+          };
+          doclet.description = tag.value.description;
+        }
+      }
+    }
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.openlayers.publish" id="apidoc.module.openlayers.publish">module openlayers.publish</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.openlayers.publish.publish" id="apidoc.element.openlayers.publish.publish">
+        function <span class="apidocSignatureSpan">openlayers.</span>publish
+        <span class="apidocSignatureSpan">(data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">publish = function (data, opts) {
+
+  function getTypes(data) {
+    var types = [];
+    data.forEach(function(name) {
+      types.push(name.replace(/^function$/, &#x27;Function&#x27;));
+    });
+    return types;
+  }
+
+  // get all doclets with the &#x22;api&#x22; property or define (excluding events) or
+  // with olx namespace
+  var classes = {};
+  var docs = data(
+      [
+        {define: {isObject: true}},
+        function() {
+          if (this.kind == &#x27;class&#x27;) {
+            if (!(&#x27;extends&#x27; in this) || typeof this.api == &#x27;string&#x27;) {
+              classes[this.longname] = this;
+              return true;
+            }
+          }
+          return (typeof this.api == &#x27;string&#x27; ||
+              this.meta &#x26;&#x26; (/[\\\/]externs$/).test(this.meta.path));
+        }
+      ],
+      {kind: {&#x27;!is&#x27;: &#x27;file&#x27;}},
+      {kind: {&#x27;!is&#x27;: &#x27;event&#x27;}}).get();
+
+  // get symbols data, filter out those that are members of private classes
+  var symbols = [];
+  var defines = [];
+  var typedefs = [];
+  var externs = [];
+  var base = [];
+  var augments = {};
+  var symbolsByName = {};
+  docs.filter(function(doc) {
+    var include = true;
+    var constructor = doc.memberof;
+    if (constructor &#x26;&#x26; constructor.substr(-1) === &#x27;_&#x27;) {
+      assert.strictEqual(doc.inherited, true,
+          &#x27;Unexpected export on private class: &#x27; + doc.longname);
+      include = false;
+    }
+    return include;
+  }).forEach(function(doc) {
+    var isExterns = (/[\\\/]externs$/).test(doc.meta.path);
+    if (isExterns &#x26;&#x26; doc.longname.indexOf(&#x27;olx.&#x27;) === 0) {
+      if (doc.kind == &#x27;typedef&#x27;) {
+        typedefs.push({
+          name: doc.longname,
+          types: [&#x27;{}&#x27;]
+        });
+      } else {
+        var typedef = typedefs[typedefs.length - 1];
+        var type = typedef.types[0];
+        typedef.types[0] = type
+            .replace(/\}$/, &#x27;, &#x27; + doc.longname.split(&#x27;#&#x27;)[1] +
+                &#x27;: (&#x27; + getTypes(doc.type.names).join(&#x27;|&#x27;) + &#x27;)}&#x27;)
+            .replace(&#x27;{, &#x27;, &#x27;{&#x27;);
+      }
+    } else if (doc.define) {
+      defines.push({
+        name: doc.longname,
+        description: doc.description,
+        path: path.join(doc.meta.path, doc.meta.filename),
+        default: doc.define.default
+      });
+    } else if (doc.kind == &#x27;typedef&#x27; || doc.isEnum === true) {
+      typedefs.push({
+        name: doc.longname,
+        types: getTypes(doc.type.names)
+      });
+    } else {
+      var types;
+      var symbol = {
+        name: doc.longname,
+        kind: doc.kind,
+        description: doc.classdesc || doc.description,
+        stability: doc.api,
+        path: path.join(doc.meta.path, doc.meta.filename)
+      };
+      if (doc.augments) {
+        symbol.extends = doc.augments[0];
+      }
+      if (doc.virtual) {
+        symbol.virtual = true;
+      }
+      if (doc.type) {
+        symbol.types = getTypes(doc.type.names);
+      }
+      if (doc.params) {
+        var params = [];
+        doc.params.forEach(function(param) {
+          var paramInfo = {
+            name: param.name
+          };
+          params.push(paramInfo);
+          paramInfo.types = getTypes(param.type.names);
+          if (typeof param.variable == &#x27;boolean&#x27;) {
+            paramInfo.variable = param.variable;
+          }
+          if (typeof param.optional == &#x27;boolean&#x27;) {
+            paramInfo.optional = param.optional;
+          }
+          if (typeof param.nullable == &#x27;boolean&#x27;) {
+            paramInfo.nullable = param.nullable;
+          }
+        });
+        symbol.params = params;
+      }
+      if (doc.returns) {
+        symbol.returns = {
+          types: getTypes(doc.returns[0].type.names)
+        };
+        if (typeof doc.returns[0].nullable == &#x27;boolean&#x27;) {
+          symbol.returns.nullable = doc.returns[0].nullable;
+        }
+      }
+      if (doc.tags) {
+        doc.tags.every(function(tag) {
+          if (tag.title == &#x27;template&#x27;) {
+            symbol.template = tag.value;
+            return false;
+          }
+          return true;
+        });
+      }
+
+      var target = isExterns ? externs : (doc.api ? symbols : base);
+      var existingSymbol = symbolsByName[symbol.name];
+      if (existingSymbol) {
+        var idx = target.indexOf(exi ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
 
 
 </div>
@@ -125,6 +424,35 @@
     });
     callback(null, server);
   });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.openlayers.virtual_plugin" id="apidoc.module.openlayers.virtual_plugin">module openlayers.virtual_plugin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.openlayers.virtual_plugin.defineTags" id="apidoc.element.openlayers.virtual_plugin.defineTags">
+        function <span class="apidocSignatureSpan">openlayers.virtual_plugin.</span>defineTags
+        <span class="apidocSignatureSpan">(dictionary)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defineTags = function (dictionary) {
+
+  var classTag = dictionary.lookUp(&#x27;class&#x27;);
+  dictionary.defineTag(&#x27;interface&#x27;, {
+    mustHaveValue: false,
+    onTagged: function(doclet, tag) {
+      classTag.onTagged.apply(this, arguments);
+      doclet.virtual = true;
+    }
+  });
+
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
