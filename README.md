@@ -1,9 +1,14 @@
-# api documentation for  [openlayers (v4.0.1)](https://openlayers.org/)  [![npm package](https://img.shields.io/npm/v/npmdoc-openlayers.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-openlayers) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-openlayers.svg)](https://travis-ci.org/npmdoc/node-npmdoc-openlayers)
+# npmdoc-openlayers
+
+#### basic api documentation for  [openlayers (v4.1.0)](https://openlayers.org/)  [![npm package](https://img.shields.io/npm/v/npmdoc-openlayers.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-openlayers) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-openlayers.svg)](https://travis-ci.org/npmdoc/node-npmdoc-openlayers)
+
 #### Build tools and sources for developing OpenLayers based mapping applications
 
-[![NPM](https://nodei.co/npm/openlayers.png?downloads=true)](https://www.npmjs.com/package/openlayers)
+[![NPM](https://nodei.co/npm/openlayers.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/openlayers)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-openlayers/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-openlayers%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-openlayers/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-openlayers/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-openlayers/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-openlayers/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-openlayers/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-openlayers/build/screenCapture.npmPackageListing.svg)
 
@@ -21,11 +26,11 @@
         "url": "https://github.com/openlayers/openlayers/issues"
     },
     "dependencies": {
-        "async": "2.1.4",
-        "browserify": "14.0.0",
-        "closure-util": "1.17.0",
+        "async": "2.3.0",
+        "browserify": "14.3.0",
+        "closure-util": "1.18.0",
         "derequire": "2.0.6",
-        "fs-extra": "2.0.0",
+        "fs-extra": "2.1.2",
         "glob": "7.1.1",
         "handlebars": "4.0.6",
         "jsdoc": "3.4.3",
@@ -42,32 +47,31 @@
     },
     "description": "Build tools and sources for developing OpenLayers based mapping applications",
     "devDependencies": {
-        "clean-css-cli": "4.0.6",
-        "coveralls": "2.11.16",
+        "clean-css-cli": "4.0.12",
+        "coveralls": "2.13.0",
         "debounce": "^1.0.0",
-        "eslint": "3.15.0",
+        "eslint": "3.18.0",
         "eslint-config-openlayers": "7.0.0",
         "eslint-plugin-openlayers-internal": "^3.1.0",
-        "esprima": "2.x",
         "expect.js": "0.3.1",
         "gaze": "^1.0.0",
         "istanbul": "0.4.5",
-        "jquery": "3.1.1",
+        "jquery": "3.2.1",
         "jscodeshift": "^0.3.30",
         "mocha": "3.2.0",
         "mocha-phantomjs-core": "^2.1.0",
         "mustache": "2.3.0",
         "phantomjs-prebuilt": "2.1.14",
-        "proj4": "2.3.17",
+        "proj4": "2.4.3",
         "resemblejs": "2.2.3",
         "serve-files": "1.0.1",
-        "sinon": "1.17.7",
-        "slimerjs": "0.906.2"
+        "sinon": "2.1.0",
+        "slimerjs": "0.10.3"
     },
     "directories": {},
     "dist": {
-        "shasum": "ab04e02365e69e99e0264d81668eda31651e7df9",
-        "tarball": "https://registry.npmjs.org/openlayers/-/openlayers-4.0.1.tgz"
+        "shasum": "22c4fa237aa3c596b6e81305eaaf570a2cb0e4ac",
+        "tarball": "https://registry.npmjs.org/openlayers/-/openlayers-4.1.0.tgz"
     },
     "eslintConfig": {
         "extends": "openlayers",
@@ -116,7 +120,7 @@
             "browserify": true
         }
     ],
-    "gitHead": "f515c86f540c503a5e1fad1c7274e864ebce7910",
+    "gitHead": "2b5d6536cafc3449ac50df0e5edf126d998baff5",
     "homepage": "https://openlayers.org/",
     "keywords": [
         "map",
@@ -127,33 +131,26 @@
     "main": "dist/ol.js",
     "maintainers": [
         {
-            "name": "ahocevar",
-            "email": "andreas.hocevar@gmail.com"
+            "name": "ahocevar"
         },
         {
-            "name": "bartvde",
-            "email": "bartvde@boundlessgeo.com"
+            "name": "bartvde"
         },
         {
-            "name": "elemoine",
-            "email": "eric.lemoine@gmail.com"
+            "name": "elemoine"
         },
         {
-            "name": "fredj",
-            "email": "frederic.junod@gmail.com"
+            "name": "fredj"
         },
         {
-            "name": "marcjansen",
-            "email": "jansen@terrestris.de"
+            "name": "marcjansen"
         },
         {
-            "name": "tschaub",
-            "email": "tim.schaub@gmail.com"
+            "name": "tschaub"
         }
     ],
     "name": "openlayers",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/openlayers/openlayers.git"
@@ -169,59 +166,9 @@
     "style": [
         "css/ol.css"
     ],
-    "version": "4.0.1"
+    "version": "4.1.0",
+    "bin": {}
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module openlayers](#apidoc.module.openlayers)
-1.  object <span class="apidocSignatureSpan">openlayers.</span>serve_js
-
-#### [module openlayers.serve_js](#apidoc.module.openlayers.serve_js)
-1.  [function <span class="apidocSignatureSpan">openlayers.serve_js.</span>createServer (callback)](#apidoc.element.openlayers.serve_js.createServer)
-
-
-
-# <a name="apidoc.module.openlayers"></a>[module openlayers](#apidoc.module.openlayers)
-
-
-
-# <a name="apidoc.module.openlayers.serve_js"></a>[module openlayers.serve_js](#apidoc.module.openlayers.serve_js)
-
-#### <a name="apidoc.element.openlayers.serve_js.createServer"></a>[function <span class="apidocSignatureSpan">openlayers.serve_js.</span>createServer (callback)](#apidoc.element.openlayers.serve_js.createServer)
-- description and source-code
-```javascript
-createServer = function (callback) {
-  var server;
-  var manager = new closure.Manager({
-    lib: [
-      'src/**/*.js',
-      'build/ol.ext/*.js'
-    ],
-    cwd: path.join(__dirname, '..')
-  });
-  manager.on('error', function(err) {
-    if (server) {
-      log.error('serve', err.message);
-    } else {
-      callback(err);
-    }
-  });
-  manager.on('ready', function() {
-    server = new closure.Server({
-      manager: manager,
-      loader: '/loader.js'
-    });
-    callback(null, server);
-  });
-}
-```
-- example usage
-```shell
-n/a
 ```
 
 
